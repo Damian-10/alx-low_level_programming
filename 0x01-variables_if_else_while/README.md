@@ -1,1 +1,1 @@
-project to learn about arithmetic operators,relational operators,boolean operators,comments,declaring variables and loops
+project to learn about arithmetic operators,relational operators,boolean operators,comments.
