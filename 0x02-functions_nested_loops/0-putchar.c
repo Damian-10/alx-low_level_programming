@@ -1,11 +1,19 @@
-#include "main.h"
+#include "putchar.h"
 /**
- * main - print _putcher
- * is written by mbah
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Alway 0 (Sucess)
  */
+
 int main(void)
 {
-__putchar("_");
-_putchar(_"p");
-r
+	char *h = "putchar\n";
+
+	while (*h)
+	{
+		_putchar(*h);
+		h++;
+	}
+	return (0);
+}
+
