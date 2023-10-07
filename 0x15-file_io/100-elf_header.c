@@ -35,11 +35,12 @@ dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 exit(98);
 }
 }
+}
 /**
 * print_magic - To Print the magic numbers of an ELF header.
 * @e_ident: To get A pointer to an array containing the ELF magic numbers.
 *
-* Description: To get Magic numbers are separated by spaces.
+* Description: Magic numbers are separated by spaces.
 */
 void print_magic(unsigned char *e_ident)
 {
@@ -99,9 +100,9 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
 }
 /**
-*  * print_version - To Print the version of an ELF header.
+*  *  * print_version - To Print the version of an ELF header.
 *   * @e_ident: To get A pointer to an array containing the ELF version.
-**/
+*    */
 void print_version(unsigned char *e_ident)
 {
 printf(" Version: %d",
@@ -117,9 +118,9 @@ break;
 }
 }
 /**
- * print_osabi - To Print the OS/ABI of an ELF header.
- * @e_ident: To get A pointer to an array containing the ELF version.
- */
+* print_osabi - To Print the OS/ABI of an ELF header.
+* @e_ident: To get A pointer to an array containing the ELF version.
+*/
 void print_osabi(unsigned char *e_ident)
 {
 printf(" OS/ABI: ");
@@ -202,7 +203,7 @@ printf("<unknown: %x>\n", e_type);
 /**
 * print_entry - To Print the entry point of an ELF header.
 * @e_entry: To get The address of the ELF entry point.
-* @e_ident: To get A pointer to an array containing the ELF class.
+* * @e_ident: To get A pointer to an array containing the ELF class.
 */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
@@ -279,7 +280,7 @@ print_osabi(header->e_ident);
 print_abi(header->e_ident);
 print_type(header->e_type, header->e_ident);
 print_entry(header->e_entry, header->e_ident);
-free(header)
+free(header);
 close_elf(o);
 return (0);
 }
